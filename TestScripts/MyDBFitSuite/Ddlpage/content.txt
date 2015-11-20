@@ -1,4 +1,5 @@
 !path library/*.jar
+!path lib/*.jar
 !|dbfit.OracleTest|
 !|connect|localhost:1521|pocuser|pocpwd|orcl|
 
