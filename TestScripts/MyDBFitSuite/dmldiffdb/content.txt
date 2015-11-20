@@ -1,4 +1,5 @@
-!path library/ojdbc6.jar
+!path library/*.jar
+!path lib/*.jar
 !|dbfit.OracleTest|
 
 !define SQL {select * from poctest2} 
