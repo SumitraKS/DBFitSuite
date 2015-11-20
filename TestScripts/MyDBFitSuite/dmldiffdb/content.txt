@@ -1,4 +1,3 @@
-!path library/*.jar
 !path lib/*.jar
 !|dbfit.OracleTest|
 
