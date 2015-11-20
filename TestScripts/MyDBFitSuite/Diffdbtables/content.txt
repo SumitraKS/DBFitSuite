@@ -1,4 +1,4 @@
-!path lib/*.jar
+!path library/*.jar
 !|dbfit.OracleTest|
 
 !define SQL {select * from tab} 
