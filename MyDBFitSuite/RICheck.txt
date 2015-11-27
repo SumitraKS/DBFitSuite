@@ -1,0 +1,15 @@
+!path lib/*.jar
+!|dbfit.OracleTest|
+
+!define SQL {select count(parentID) as count from child where parentID not in (select parentID from parent)} 
+!|Connect|jdbc:oracle:thin:testuser/testpwd@localhost:1521:orcl| 
+
+!|Query|${SQL}|
+|count?|
+|>>landing|
+
+!|Connect|jdbc:oracle:thin:pocuser/pocpwd@localhost:1521:orcl| 
+!|Query|select case when :landing>= (select count(parentID)as count from child where parentID not in (select parentID from parent)) then 'PASS' else 'FAIL' end as result from dual|
+|result?|
+|PASS|
+
